@@ -1,2 +1,2 @@
-# FTT-countries-ui-react
+# Frontend tech talks UI demo app
 UI for countries demo app using React
