@@ -1,6 +1,7 @@
 import React from 'react';
 import Filter from './Filter';
 import styled from 'styled-components';
+
 const FilterWraper = styled.div`
   padding-top:20px;
   margin-bottom:20px;

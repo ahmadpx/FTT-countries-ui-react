@@ -19,7 +19,7 @@ function FiltersContainer({ store }) {
   return (
     <>
       <Filters>
-        <Logo img={earth} />
+        {/* <Logo img={earth} /> */}
 
         {filters && (
           <>
