@@ -2,17 +2,17 @@ import React from 'react';
 import Filter from './Filter';
 import styled from 'styled-components';
 
-const FilterWraper = styled.div`
-  padding-top:20px;
-  margin-bottom:20px;
-  box-shadow:0px 1px 3px rgba(0,0,0,0.1);
-  background:white;
-  border-radius:3px;
-`
+const FilterWrapper = styled.div`
+  padding-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 3px;
+`;
 const FilterTitle = styled.h5`
-  margin:0 10px 15px;
-  font-size:18px;
-`
+  margin: 0 10px 15px;
+  font-size: 18px;
+`;
 export default function FilterGroup({
   title,
   filtersData,
@@ -22,7 +22,7 @@ export default function FilterGroup({
   return (
     filtersData &&
     filtersData.length > 0 && (
-      <FilterWraper>
+      <FilterWrapper>
         <FilterTitle>{title}</FilterTitle>
         <>
           {filtersData.slice(0, 10).map(filter => (
@@ -31,9 +31,10 @@ export default function FilterGroup({
               filter={filter}
               isSelectedFilter={isSelectedFilter}
               toggleFilter={toggleFilter}
-            />))}
+            />
+          ))}
         </>
-      </FilterWraper>
+      </FilterWrapper>
     )
   );
 }

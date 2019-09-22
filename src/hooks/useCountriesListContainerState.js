@@ -9,6 +9,9 @@ export default function useCountriesListContainerState(store) {
       autorun(() =>
         setState({
           countriesList: store.countriesList,
+          isFetched: store.countriesStore.isFetched,
+          isLoading: store.countriesStore.isLoading,
+          hasError: store.countriesStore.hasError,
         }),
       ),
     [],
