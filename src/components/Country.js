@@ -35,8 +35,13 @@ const ContryName = styled.h4`
   margin:0 0 0 0;
   font-size:24px;
   margin-bottom:30px;
-  padding:0 15px;
+  margin:0 10px;
   text-align:center;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 19ch;
 `
 const Details = styled.div`
   background:white;
