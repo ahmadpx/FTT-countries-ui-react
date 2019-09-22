@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import useFiltersContainerState from '../../hooks/useFiltersContainerState';
 import FilterGroup from '../../components/FilterGroup';
 import styled from 'styled-components';
@@ -14,7 +14,6 @@ function FiltersContainer({ store }) {
     toggleFilter,
     resetAllFilters,
     isSelectedFilter,
-    filtersState
   } = useFiltersContainerState(store);
 
   return (
