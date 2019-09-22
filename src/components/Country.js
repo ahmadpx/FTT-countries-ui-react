@@ -35,6 +35,8 @@ const ContryName = styled.h4`
   margin:0 0 0 0;
   font-size:24px;
   margin-bottom:30px;
+  padding:0 15px;
+  text-align:center;
 `
 const Details = styled.div`
   background:white;
