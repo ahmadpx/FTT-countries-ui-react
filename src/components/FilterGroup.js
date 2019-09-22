@@ -1,5 +1,18 @@
 import React from 'react';
+import Filter from './Filter';
+import styled from 'styled-components';
 
+const FilterWraper = styled.div`
+  padding-top:20px;
+  margin-bottom:20px;
+  box-shadow:0px 1px 3px rgba(0,0,0,0.1);
+  background:white;
+  border-radius:3px;
+`
+const FilterTitle = styled.h5`
+  margin:0 10px 15px;
+  font-size:18px;
+`
 export default function FilterGroup({
   title,
   filtersData,
@@ -9,26 +22,18 @@ export default function FilterGroup({
   return (
     filtersData &&
     filtersData.length > 0 && (
-      <div>
-        <h3>{title}</h3>
-        <div>
+      <FilterWraper>
+        <FilterTitle>{title}</FilterTitle>
+        <>
           {filtersData.slice(0, 10).map(filter => (
-            <div key={filter.value}>
-              <input
-                id={filter.value}
-                type="checkbox"
-                checked={isSelectedFilter(filter)}
-                onChange={() => toggleFilter(filter)}
-              />
-
-              <label htmlFor={filter.value}>
-                <span>{filter.value}</span>
-                <span>({filter.count})</span>
-              </label>
-            </div>
-          ))}
-        </div>
-      </div>
+            <Filter
+              key={filter.value}
+              filter={filter}
+              isSelectedFilter={isSelectedFilter}
+              toggleFilter={toggleFilter}
+            />))}
+        </>
+      </FilterWraper>
     )
   );
 }

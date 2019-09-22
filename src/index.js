@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import CountriesListPageStore from 'ftt-countries-sdk/lib/stores/countries-list-page.store'
 
-const store = new CountriesListPageStore();
+const store = new CountriesListPageStore({});
 
 ReactDOM.render(<App store={store} />, document.getElementById('root'));
 

@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import CountriesListContainer from './containers/CountriesListContainer';
 import FiltersContainer from './containers/FiltersContainer';
+import {
+  Layout,
+  GlobalStyle
+} from './App.styles'
+
 
 function App({ store }) {
   useEffect(() => {
@@ -10,10 +15,14 @@ function App({ store }) {
   }, []);
 
   return (
-    <div className="App" style={{ display: 'flex' }}>
-      <FiltersContainer store={store} />
-      <CountriesListContainer store={store} />
-    </div>
+    <>
+
+      <GlobalStyle />
+      <Layout className="App">
+        <FiltersContainer store={store} />
+        <CountriesListContainer store={store} />
+      </Layout>
+    </>
   );
 }
 
