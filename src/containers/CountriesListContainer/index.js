@@ -1,19 +1,11 @@
 import React, { memo } from 'react';
 import useCountriesListContainerState from '../../hooks/useCountriesListContainerState';
 import Country from './../../components/Country';
-import styled from 'styled-components';
 import Loading from './../../components/Loading'
-const Container = styled.div`
-  display:flex;
-  flex-wrap:wrap;
-  flex-grow:1;
-  padding: 0 10px;
-`
-const Grid = styled.div`
-  flex-basis:33.333%;
-  padding:0 10px;
-  box-sizing:border-box;
-`
+import {
+  Container,
+  Grid
+} from './CountriesListContainer.styles'
 function CountriesListContainer({ store }) {
   const { countriesList } = useCountriesListContainerState(store);
 
