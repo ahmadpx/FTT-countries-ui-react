@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Frontend tech talks UI demo app
+UI for countries demo app using React
+
+Preview url: 
+https://ftt-countries-ui-vue-749bnq4ax.now.sh/
+
 ## Available Scripts
 
 In the project directory, you can run:
