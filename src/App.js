@@ -8,7 +8,7 @@ function App({ store }) {
     store.countriesStore.fetch(function onError(error) {
       console.error(error);
     });
-  }, [store.countriesStore]);
+  }, []);
 
   return (
     <>
