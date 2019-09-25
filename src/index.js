@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import CountriesListPageStore from 'ftt-countries-sdk/lib/stores/countries-list-page.store'
+import Store from 'ftt-countries-sdk/lib/stores';
 
-const store = new CountriesListPageStore({});
+const store = new Store();
 
 ReactDOM.render(<App store={store} />, document.getElementById('root'));
 

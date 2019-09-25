@@ -5,7 +5,7 @@ import { Layout, GlobalStyle, FrameworkPadge } from './App.styles';
 import reactIcon from './logo.svg';
 function App({ store }) {
   useEffect(() => {
-    store.countriesStore.fetch(function onError(error) {
+    store.countriesList.countriesStore.fetch(function onError(error) {
       console.error(error);
     });
   }, []);

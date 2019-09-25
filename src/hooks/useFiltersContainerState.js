@@ -8,11 +8,11 @@ export default function useFiltersContainerState(store) {
     () =>
       autorun(() =>
         setState({
-          filters: store.countriesStore.filters,
-          filtersState: toJS(store.filtersState),
-          toggleFilter: store.toggleFilter,
-          resetAllFilters: store.resetAllFilters,
-          isSelectedFilter: store.isSelectedFilter,
+          filters: store.countriesList.countriesStore.filters,
+          filtersState: toJS(store.countriesList.filtersState),
+          toggleFilter: store.countriesList.toggleFilter,
+          resetAllFilters: store.countriesList.resetAllFilters,
+          isSelectedFilter: store.countriesList.isSelectedFilter,
         }),
       ),
     [],
